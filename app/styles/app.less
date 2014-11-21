@@ -1,0 +1,134 @@
+@import "../../bower_components/bootstrap/less/variables.less";
+@import "../../bower_components/bootstrap/less/mixins.less";
+
+/* Space out content a bit */
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text: white;
+}
+
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 19px;
+}
+
+.mymusic {
+
+  &-index {
+    &-search {
+      font-size: 3rem;
+      height: 60px;
+      margin-top: 2rem;
+    }
+  }
+
+  &-newalbum-btn {
+    text-align: center;
+
+    & > button {
+      font-size: @font-size-h3;
+    }
+  }
+
+
+  &-newalbum {
+    overflow: hidden;
+
+    & > .panel {
+      margin-top: 1rem;
+      &.ng-enter {
+        -webkit-transition: 0.2s linear all;
+        transition: 0.2s linear all;
+        margin-top: -200px;
+        opacity: 0;
+
+        &.ng-enter-active {
+          margin-top: 1rem;
+          opacity: 1;
+        }
+      }
+
+      &.ng-leave {
+        -webkit-transition: 0.2s linear all;
+        transition: 0.2s linear all;
+        margin-top: 1rem;
+        opacity: 1;
+
+        &.ng-leave-active {
+          margin-top: -200px;
+          opacity: 0;
+        }
+      }
+    }
+  }
+  //  -webkit-transition: 1s linear all; /* Safari/Chrome */
+  //  transition: 1s linear all; /* All other modern browsers and IE10+ */
+
+  //  /* The animation preparation code */
+  //  opacity: 0;
+  // }
+
+  /*
+   Keep in mind that you want to combine both CSS
+   classes together to avoid any CSS-specificity
+   conflicts
+  */
+/*  &-newalbum.ng-enter.ng-enter-active {
+    The animation code itself
+   opacity: 1;
+  }*/
+
+  &-albums {
+    list-style-type: none;
+    padding-left: 0;
+
+    & > li {
+      .clearfix();
+      padding: 0.5rem 5px;
+      margin: 0.3rem 10px;
+      vertical-align: bottom;
+      border-bottom: 1px dotted @gray;
+      font-size: 2rem;
+
+      & > * {
+        height: 3rem;
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+    }
+
+
+    &-title {
+    }
+
+    &-artist {
+
+      &By {
+        color: @gray;
+      }
+    }
+
+    &-year {
+      color: @gray;
+    }
+
+    &-firstPlayed {
+      float: right;
+      color: @gray;
+    }
+  }
+
+  &-album {
+    &-firstPlayed {
+      float: right;
+      color: @gray;
+    }
+  }
+}

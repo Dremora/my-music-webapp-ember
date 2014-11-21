@@ -1,0 +1,9 @@
+<h2>{{title}} <small>{{artist}}</small></h3>
+{{#link-to 'albums.edit' this}}edit{{/link-to}}
+<span class="mymusic-album-firstPlayed">{{formatted-date first_played}}</span>
+
+<ul>
+  {{#each sources}}
+  <li>{{location}}</li>
+  {{/each}}
+</ul>

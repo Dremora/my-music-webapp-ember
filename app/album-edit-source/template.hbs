@@ -1,0 +1,80 @@
+  <hr>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Location</label>
+    <div class="col-sm-9">
+    {{view "select"
+      classNames="form-control"
+      content=locations
+      optionValuePath="content.id"
+      optionLabelPath="content.label"
+      value=source.location
+    }}
+    </div>
+    <div class="col-sm-1">
+      <button type="button" class="btn btn-default" {{action 'deleteSource'}}>×</button>
+    </div>
+  </div>
+  {{#if isFoobar}}
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Accurate rip</label>
+    <div class="col-sm-10">
+      {{input class="form-control" value=source.accurate_rip}}
+    </div>
+  </div>
+  {{/if}}
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Comments</label>
+    <div class="col-sm-10">
+      {{input class="form-control" value=source.comments}}
+    </div>
+  </div>
+  {{#if isFoobar}}
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Cue issues</label>
+    <div class="col-sm-10">
+      {{input class="form-control" value=source.cue_issues}}
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Discs</label>
+    <div class="col-sm-10">
+      {{input class="form-control" value=source.discs}}
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Download</label>
+    <div class="col-sm-10">
+      {{input class="form-control" value=source.download}}
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Edition</label>
+    <div class="col-sm-10">
+      {{input class="form-control" value=source.edition}}
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Format</label>
+    <div class="col-sm-10">
+    {{view "select"
+      classNames="form-control"
+      content=formats
+      optionValuePath="content.id"
+      optionLabelPath="content.label"
+      value=source.format
+    }}
+    </div>
+  </div>
+  {{/if}}
+  <div class="form-group">
+    <label class="col-sm-2 control-label">MBID</label>
+    <div class="col-sm-10">
+      {{input class="form-control" value=source.mbid}}
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Tag issues</label>
+    <div class="col-sm-10">
+      {{input class="form-control" value=source.tag_issues}}
+    </div>
+  </div>

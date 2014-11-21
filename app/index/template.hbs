@@ -1,0 +1,19 @@
+{{input class="form-control mymusic-index-search" value=query placeholder="Search for music"}}
+
+<div class="row">
+  <div class="col-xs-12">
+    <ul class="mymusic-albums">
+    {{#each albums}}
+      <li class="mymusic-albums-album">
+        <span class="mymusic-albums-artist">{{artist}}</span> — <span class="mymusic-albums-title">
+        {{#link-to 'albums.view' this}}{{title}}{{/link-to}}
+         {{#if year}}
+         <span class="mymusic-albums-year">({{year}})</span>
+         {{/if}}
+         <span class="mymusic-albums-firstPlayed">{{formatted-date first_played}}</span>
+        </span>
+      </li>
+    {{/each}}
+    </ul>
+  </div>
+</div>
