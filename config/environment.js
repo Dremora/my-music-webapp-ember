@@ -41,7 +41,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.RESTNamespace = 'api';
   }
 
   return ENV;
