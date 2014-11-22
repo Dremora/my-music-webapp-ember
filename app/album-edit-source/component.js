@@ -21,7 +21,7 @@ export default Ember.Component.extend({
   }.property('source.location'),
 
   actions: {
-    deleteSource: function (source) {
+    deleteSource: function () {
       var sources = this.get('sources')
       sources.removeFragment(this.get('source'))
     }

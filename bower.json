@@ -1,5 +1,5 @@
 {
-  "name": "my-music",
+  "name": "my-music-client",
   "dependencies": {
     "handlebars": "~1.0.0",
     "jquery": "^1.11.1",
