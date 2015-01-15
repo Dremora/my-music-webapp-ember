@@ -1,11 +1,16 @@
 import Ember from 'ember';
+import config from '../config/environment';
+
+function fullUrl (url) {
+  return (config.RESTNamespace ? config.RESTNamespace + '/' : '') + url;
+}
 
 export default Ember.Object.extend({
   open: function (authentication) {
     var authorizationCode = authentication.authorizationCode;
-    return new Ember.RSVP.Promise(function (resolve, reject){
+    return new Ember.RSVP.Promise(function (resolve, reject) {
       Ember.$.ajax({
-        url: 'session',
+        url: fullUrl('session'),
         data: { type: 'facebook', code: authorizationCode },
         dataType: 'json',
         method: 'put',
@@ -24,7 +29,7 @@ export default Ember.Object.extend({
   fetch: function () {
     return new Ember.RSVP.Promise(function (resolve, reject) {
       Ember.$.ajax({
-        url: 'session',
+        url: fullUrl('session'),
         dataType: 'json',
         success: function (data) {
           if (data.is_authenticated) {
@@ -41,7 +46,7 @@ export default Ember.Object.extend({
   close: function () {
     return new Ember.RSVP.Promise(function (resolve, reject) {
       Ember.$.ajax({
-        url: 'session',
+        url: fullUrl('session'),
         dataType: 'json',
         method: 'delete',
         success: Ember.run.bind(null, resolve),
