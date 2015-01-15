@@ -14,6 +14,16 @@ module.exports = function(environment) {
       }
     },
 
+    torii: {
+      sessionServiceName: 'session',
+      providers: {
+        'facebook-oauth2': {
+          apiKey: '560044377462970', // dev only,
+          redirectUri: 'http://localhost:4200/'
+        }
+      }
+    },
+
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
@@ -42,6 +52,10 @@ module.exports = function(environment) {
 
   if (environment === 'production') {
     ENV.RESTNamespace = 'api';
+    ENV.torii.providers['facebook-oauth2'] = {
+      apiKey: '560000260800715',
+      redirectUri: 'http://my-music.dremora.com/'
+    }
   }
 
   return ENV;

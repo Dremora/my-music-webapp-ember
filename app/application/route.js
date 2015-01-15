@@ -1,18 +1,20 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  setupController: function () {
-    // this.store.find('album', { length: true }).then(function (result) {
-    //   console.log(result.get('content'))
-    // })
-    // controller.set('model', albums)
-  },
+  login: function () {
+    this.get('session').fetch();
+  }.on('init'),
 
-  queryAlbums: function () {
-  },
+  actions: {
+    login: function () {
+      this.get('session').open('facebook-oauth2').then(function() {
+      }, function (error){
+        console.log('Could not sign you in: ' + error.message);
+      });
+    },
 
-  model: function () {
-    // return new Ember.ArrayController()
-     // return this.store.find('album');
+    logout: function () {
+      this.get('session').close();
+    }
   }
 });
