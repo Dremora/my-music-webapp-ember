@@ -22,7 +22,7 @@ script:
 deploy:
   provider: heroku
   api_key:
-    secure: bdw+L6W3VybnRnCrbYraAt8uQVRuRcJuI/zM5b80Qsv/DAPgedUV5ii7bMYhUe0ebBd7nwjPF62gkBi9zsFO2L9qBSH65smyInXHclmxefvfZY7VXq9d01BNwJpFuoZ9oeSd7NHmNi0P4QJHLqGLN/NELYWWSvlwoTlt+i7GPJw=
+    secure: I7z6egYGqR0LHv84ijsBD+BaR9TqgVfqRT/QVfBX/a2HANzR9vjeK9HT+kJ5Fint/bfxlfVXTO01Cd2NDEgvQ+3/AI2S8Aj3Bd692Fjx+E9BfaCFl8mijECOeyXeWEQTVYjJfVka9fgyTR2/rLjVji9KbKAA/knQBG8fVIi1n/E=
   app: my-music-client
   on:
     repo: Dremora/my-music-client
