@@ -3,14 +3,14 @@
 <div class="row">
   <div class="col-xs-12">
     <ul class="mymusic-albums">
-    {{#each albums}}
+    {{#each albums as |album|}}
       <li class="mymusic-albums-album">
-        <span class="mymusic-albums-artist">{{artist}}</span> — <span class="mymusic-albums-title">
-        {{#link-to 'albums.view' this}}{{title}}{{/link-to}}
+        <span class="mymusic-albums-artist">{{album.artist}}</span> — <span class="mymusic-albums-title">
+        {{#link-to 'albums.view' album}}{{album.title}}{{/link-to}}
          {{#if year}}
-         <span class="mymusic-albums-year">({{year}})</span>
+         <span class="mymusic-albums-year">({{album.year}})</span>
          {{/if}}
-         <span class="mymusic-albums-firstPlayed">{{formatted-date first_played}}</span>
+         <span class="mymusic-albums-firstPlayed">{{formatted-date album.first_played}}</span>
         </span>
       </li>
     {{/each}}

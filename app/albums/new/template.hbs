@@ -46,7 +46,7 @@
     </div>
   </div>
   {{/if}}
-  {{#each source in model.sources}}
+  {{#each model.sources as |source|}}
     {{album-edit-source source=source sources=model.sources}}
   {{/each}}
   <div class="form-group">
