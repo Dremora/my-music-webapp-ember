@@ -5,23 +5,23 @@ export default Ember.Controller.extend({
   albums: [],
 
   queryAlbums: function () {
-    var query = this.get('query')
+    let query = this.get('query')
     if (!query) {
       this.set('albums', [])
       return
     }
-    var promise = this.store.find('album', { query: this.get('query')})
+    let promise = this.store.find('album', { query: this.get('query')})
     this.set('albumPromise', promise)
-    promise.then(function (albums) {
+    promise.then((albums) => {
       if (promise.shouldStop) {
         return
       }
       this.set('albums', albums)
-    }.bind(this))
+    })
   },
 
   queryChanged: function () {
-    var previousPromise = this.get('albumPromise')
+    let previousPromise = this.get('albumPromise')
     if (previousPromise) {
       previousPromise.shouldStop = true
     }

@@ -9,5 +9,4 @@ export default Ember.Route.extend({
     willTransition: function () {
       this.get('controller').get('model').rollback()
     }
-  }
-});
+  }});

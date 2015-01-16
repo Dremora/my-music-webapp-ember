@@ -7,10 +7,10 @@ export default Ember.Route.extend({
 
   actions: {
     login: function () {
-      this.get('session').open('facebook-oauth2').then(function() {
-      }, function (error){
-        console.log('Could not sign you in: ' + error.message);
-      });
+      this.get('session').open('facebook-oauth2').then(
+        () => {},
+        (error) => console.log('Could not sign you in: ' + error.message)
+      );
     },
 
     logout: function () {

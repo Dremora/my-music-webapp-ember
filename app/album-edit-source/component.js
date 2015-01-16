@@ -22,7 +22,7 @@ export default Ember.Component.extend({
 
   actions: {
     deleteSource: function () {
-      var sources = this.get('sources')
+      let sources = this.get('sources')
       sources.removeFragment(this.get('source'))
     }
   }

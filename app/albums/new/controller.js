@@ -12,10 +12,10 @@ export default Ember.Controller.extend({
   }.property('firstPlayedMode'),
 
   specificDateValue: function () {
-    var firstPlayedYear = this.get('firstPlayedYear')
-    var firstPlayedMonth = this.get('firstPlayedMonth')
-    var firstPlayedDay = this.get('firstPlayedDay')
-    var value = []
+    let firstPlayedYear = this.get('firstPlayedYear')
+    let firstPlayedMonth = this.get('firstPlayedMonth')
+    let firstPlayedDay = this.get('firstPlayedDay')
+    let value = []
     if (firstPlayedYear) {
       firstPlayedYear = parseInt(firstPlayedYear)
       if (!Number.isNaN(firstPlayedYear) && firstPlayedYear) {
@@ -30,14 +30,13 @@ export default Ember.Controller.extend({
         }
       }
     }
-    console.log(value)
     return value
   }.property('firstPlayedYear', 'firstPlayedMonth', 'firstPlayedDay'),
 
   actions: {
     addSource: function () {
-      var model = this.get('model')
-      var sources = model.get('sources')
+      let model = this.get('model')
+      let sources = model.get('sources')
       if (!sources) {
         model.set('sources', [])
         sources = model.get('sources')
@@ -46,11 +45,11 @@ export default Ember.Controller.extend({
     },
 
     add: function () {
-      var model = this.get('model')
+      let model = this.get('model')
       // model.set('first_played')
-      model.save().then(function () {
+      model.save().then(() => {
         this.transitionToRoute('albums.view', this.get('model'))
-      }.bind(this))
+      })
     }
   }
 

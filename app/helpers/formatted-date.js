@@ -2,7 +2,7 @@
 
 import Ember from 'ember';
 
-export default Ember.Handlebars.makeBoundHelper(function (val) {
+export default Ember.Handlebars.makeBoundHelper((val) => {
   if (Ember.isArray(val)) {
     if (val.length === 1) {
       return moment.utc([val[0]]).format('YYYY')

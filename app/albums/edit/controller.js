@@ -8,14 +8,14 @@ export default Ember.Controller.extend({
 
   actions: {
     save: function () {
-      this.get('model').save().then(function () {
+      this.get('model').save().then(() => {
         this.transitionToRoute('albums.view', this.get('model'))
-      }.bind(this))
+      })
     },
 
     addSource: function () {
-      var model = this.get('model')
-      var sources = model.get('sources')
+      let model = this.get('model')
+      let sources = model.get('sources')
       if (!sources) {
         model.set('sources', [])
         sources = model.get('sources')
