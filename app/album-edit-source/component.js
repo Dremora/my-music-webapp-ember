@@ -4,6 +4,7 @@ export default Ember.Component.extend({
 
   locations: [
     { id: 'google-music', label: 'Google Music' },
+    { id: 'spotify', label: 'Spotify' },
     { id: 'foobar2000', label: 'foobar2000' }
   ],
 
@@ -18,6 +19,10 @@ export default Ember.Component.extend({
 
   isFoobar: function () {
     return this.source.get('location') === 'foobar2000'
+  }.property('source.location'),
+
+  isNotSpotify: function () {
+    return this.source.get('location') !== 'spotify'
   }.property('source.location'),
 
   actions: {

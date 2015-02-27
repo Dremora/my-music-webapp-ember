@@ -2,10 +2,6 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
 
-  isFoobar: function (source) {
-    return source.get('location') === 'foobar2000'
-  },
-
   actions: {
     save: function () {
       this.get('model').save().then(() => {
