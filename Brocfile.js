@@ -5,7 +5,11 @@ var pickFiles = require('broccoli-static-compiler')
 var mergeTrees = require('broccoli-merge-trees')
 
 
-var app = new EmberApp();
+var app = new EmberApp({
+  vendorFiles: {
+    'handlebars.js': null
+  }
+});
 
 app.import('bower_components/bootstrap/dist/css/bootstrap.css');
 
