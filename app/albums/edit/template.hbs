@@ -23,6 +23,49 @@
       {{input class="form-control" id="commentsField" placeholder="Comments" value=model.comments}}
     </div>
   </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">First played</label>
+    <div class="radio col-sm-10">
+      <label>
+        {{radio-button value="timestamp" checked=firstPlayedMode}}
+        Timestamp
+      </label>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="radio col-sm-offset-2 col-sm-10">
+      <label>
+        {{radio-button value="date" checked=firstPlayedMode}}
+        At a specific date
+      </label>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="radio col-sm-offset-2 col-sm-10">
+      <label>
+        {{radio-button value="unknown" checked=firstPlayedMode}}
+        Unknown
+      </label>
+    </div>
+  </div>
+  {{#if isSpecificDate}}
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="row">
+        <div class="col-xs-4" style="width: 150px">{{input class="form-control" placeholder="Year" value=firstPlayedYear}}</div>
+        <div class="col-xs-2" style="width: 100px">{{input class="form-control" placeholder="Month" value=firstPlayedMonth}}</div>
+        <div class="col-xs-2" style="width: 100px">{{input class="form-control" placeholder="Day" value=firstPlayedDay}}</div>
+      </div>
+    </div>
+  </div>
+  {{/if}}
+  {{#if isSpecificTime}}
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      {{input class="form-control" placeholder="Timestamp" value=timestamp}}
+    </div>
+  </div>
+  {{/if}}
 
   {{#each model.sources as |source|}}
     {{album-edit-source source=source sources=model.sources}}

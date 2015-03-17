@@ -7,5 +7,5 @@ export default DS.Model.extend({
   year: DS.attr('number'),
   comments: DS.attr('string'),
   first_played: DS.attr('first-played'),
-  sources: DS.hasManyFragments('source')
+  sources: DS.hasManyFragments('source', { defaultValue: [] })
 });
