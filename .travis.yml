@@ -12,7 +12,7 @@ before_install:
   - "npm install -g npm@^2"
 
 install:
-  - npm install -g bower phantomjs
+  - npm install -g bower
   - npm install
   - bower install
 
