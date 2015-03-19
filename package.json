@@ -13,7 +13,7 @@
   },
   "repository": "https://github.com/Dremora/my-music-client",
   "engines": {
-    "node": ">= 0.10.0"
+    "iojs": "^1.5.1"
   },
   "author": "",
   "license": "MIT",
