@@ -18,11 +18,3 @@ install:
 
 script:
   - npm test
-
-deploy:
-  provider: heroku
-  api_key:
-    secure: I7z6egYGqR0LHv84ijsBD+BaR9TqgVfqRT/QVfBX/a2HANzR9vjeK9HT+kJ5Fint/bfxlfVXTO01Cd2NDEgvQ+3/AI2S8Aj3Bd692Fjx+E9BfaCFl8mijECOeyXeWEQTVYjJfVka9fgyTR2/rLjVji9KbKAA/knQBG8fVIi1n/E=
-  app: my-music-client
-  on:
-    repo: Dremora/my-music-client
