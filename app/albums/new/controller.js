@@ -11,8 +11,8 @@ export default Ember.Controller.extend({
     return this.get('firstPlayedMode') === 'date'
   }.property('firstPlayedMode'),
 
-  isSpecificTime: function () {
-    return this.get('firstPlayedMode') === 'timestamp'
+  isNow: function () {
+    return this.get('firstPlayedMode') === 'now'
   }.property('firstPlayedMode'),
 
   specificDateValue: function () {
@@ -36,7 +36,7 @@ export default Ember.Controller.extend({
   dateValue: function () {
     if (this.get('isSpecificDate')) {
       return this.get('specificDateValue')
-    } else if (this.get('isSpecificTime')) {
+    } else if (this.get('isNow')) {
       return new Date().valueOf()
     } else {
       return undefined
