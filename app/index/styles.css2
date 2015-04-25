@@ -1,0 +1,5 @@
+.search {
+  font-size: 3rem;
+  height: 60px;
+  margin-top: 2rem;
+}

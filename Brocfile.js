@@ -11,7 +11,7 @@ var app = new EmberApp({
   }
 });
 
-app.import('bower_components/bootstrap/dist/css/bootstrap.css');
+// app.import('bower_components/bootstrap/dist/css/bootstrap.css');
 
 app.import('bower_components/fontawesome/css/font-awesome.min.css');
 

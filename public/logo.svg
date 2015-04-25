@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="881px" height="367px" viewBox="0 0 881 367" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>Logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="881" height="367" rx="21"></rect>
+        <linearGradient x1="29.4553649%" y1="60.6213152%" x2="13.0326426%" y2="60.6213152%" id="linearGradient-3">
+            <stop stop-color="#CF7C7C" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#BB1D1D" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="51.2524078%" y1="10.8028762%" x2="90.8997529%" y2="10.8028762%" id="linearGradient-4">
+            <stop stop-color="#CF7C7C" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#CF7C7C" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#CF7C7C" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#CC6A6A" stop-opacity="0.185741897" offset="0%"></stop>
+            <stop stop-color="#BB1D1D" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="63.2512867%" y1="31.463363%" x2="63.2512867%" y2="71.3236622%" id="linearGradient-5">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-6">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Version-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Background" sketch:type="MSLayerGroup">
+            <mask id="mask-2" sketch:name="Rectangle 1" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Rectangle-1" fill="#E25D36" sketch:type="MSShapeGroup" xlink:href="#path-1"></use>
+            <path d="M424.880855,-2.41759853 L794.657291,-2.41759853 L794.657291,369.84528 L230.384342,369.84528 L424.880855,-2.41759853 Z" id="Rectangle-7" opacity="0.192280784" fill="url(#linearGradient-3)" sketch:type="MSShapeGroup" mask="url(#mask-2)"></path>
+            <path d="M-66.1041597,-3.11610334 L-66.1041597,392.883181 L139.821279,-3.11610334 L-66.1041597,-3.11610334 Z" id="Rectangle-8" opacity="0.138992537" fill="url(#linearGradient-4)" sketch:type="MSShapeGroup" mask="url(#mask-2)"></path>
+        </g>
+        <g id="Contents" sketch:type="MSLayerGroup" transform="translate(37.000000, -5.000000)">
+            <path d="M137.980168,326 C213.919321,326 275.480168,264.439153 275.480168,188.5 C275.480168,112.560847 213.919321,51 137.980168,51 C62.0410151,51 0.480168177,112.560847 0.480168177,188.5 C0.480168177,264.439153 62.0410151,326 137.980168,326 Z M2.01128461,209.088724 L115.831147,209.088724 C112.630654,212.918267 109.760891,217.536625 107.572303,222.603264 C99.3958515,241.531971 98.433337,271.232828 107.572303,282.855968 C116.711269,294.479108 133.805111,286.616608 142.35018,266.834541 C150.895249,247.052475 151.267762,213.685822 142.35018,202.344243 C139.805082,199.10733 136.545933,197.826422 132.997545,198.088724 L132.997545,198.088724 L104.346638,198.088724 L1.60809925,198.088724 C9.99166238,181.8469 52.1971831,100.02085 61.0292386,81.7236476 L175.033504,81.7236476 C171.821845,85.5596839 168.941811,90.1900915 166.746897,95.2713763 C158.570446,114.200083 157.607931,143.90094 166.746897,155.52408 C175.885864,167.14722 192.979705,159.28472 201.524774,139.502653 C210.069844,119.720587 210.442356,86.3539337 201.524774,75.0123547 C199.586599,72.5473406 197.234323,71.2166756 194.655559,70.8380547 L194.655559,70.8380547 C194.293253,70.763057 193.918025,70.7236476 193.533734,70.7236476 L66.9829527,70.7236476 C27.1265521,94.8012571 0.480168177,138.53883 0.480168177,188.5 C0.480168177,195.49729 1.00284449,202.372502 2.01128461,209.088724 Z" id="Logo" opacity="0.81" fill="url(#linearGradient-5)" sketch:type="MSShapeGroup"></path>
+            <g id="My-Music" transform="translate(296.000000, 0.000000)" font-weight="bold" font-family="Lato" fill="url(#linearGradient-6)" font-size="192" sketch:type="MSTextLayer">
+                <text id="Music">
+                    <tspan x="0" y="336" fill="#FFFFFF">Music</tspan>
+                </text>
+                <text id="My" opacity="0.615380131">
+                    <tspan x="76" y="190" fill="#FFFFFF">My</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

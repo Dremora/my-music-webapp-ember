@@ -1,0 +1,49 @@
+.mymusic-application {
+  &-header {
+    background: rgb(255, 232, 182);
+    background: -webkit-linear-gradient(to bottom, #FF6900, #E43577);
+    background: linear-gradient(to bottom, #FF6900, #E43577);
+    height: 100px;
+
+    img {
+      float: left;
+    }
+  }
+
+  &-buttons {
+    float: right;
+    margin: 28px 20px 0 0;
+
+    a {
+      color: #fff;
+    }
+  }
+
+  &-facebookLogin {
+    background: -webkit-linear-gradient(#4c69ba, #3b55a0);
+    &:hover {
+        background: -webkit-linear-gradient(#5878D2, #4868C7);
+    }
+
+    span {
+      background: #fff;
+      color: #4c69ba;
+      display: inline-block;
+      width: 16px;
+      border-radius: 2px;
+      height: 16px;
+    }
+  }
+
+  &-newAlbumButton {
+    background: rgb(32, 145, 42);
+    // border-radius: 50%;
+    // padding: 10px;
+    // width: 40px;
+    // height: 40px;
+    // color: @color-primary-1;
+    // font-size: 34px;
+    // line-height: 0.6;
+    // background: @color-secondary-2-4;
+  }
+}

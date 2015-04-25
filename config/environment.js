@@ -9,6 +9,7 @@ module.exports = function(environment) {
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
+        'ember-htmlbars-attribute-syntax': true
         // Here you can enable experimental features on an ember canary build
         // e.g. 'with-controller': true
       }
@@ -22,6 +23,11 @@ module.exports = function(environment) {
           redirectUri: 'http://localhost:4200/'
         }
       }
+    },
+
+    contentSecurityPolicy: {
+      'font-src': "'self' http://fonts.gstatic.com",
+      'style-src': "'self' 'unsafe-inline' http://fonts.googleapis.com"
     },
 
     APP: {

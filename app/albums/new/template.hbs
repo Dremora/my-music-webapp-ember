@@ -1,71 +1,59 @@
-<form class="form-horizontal" role="form">
-  <div class="form-group">
-    <label for="titleField" class="col-sm-2 control-label">Title</label>
-    <div class="col-sm-10">
-      {{input class="form-control" id="titleField" placeholder="Title" value=model.title}}
+<form class="pure-form pure-form-aligned">
+  <fieldset>
+    <div class="pure-control-group">
+      <label for="titleField">Title</label>
+      {{input id="titleField" placeholder="Title" value=model.title}}
     </div>
-  </div>
-  <div class="form-group">
-    <label for="artistField" class="col-sm-2 control-label">Artist</label>
-    <div class="col-sm-10">
-      {{input class="form-control" id="artistField" placeholder="Title" value=model.artist}}
+    <div class="pure-control-group">
+      <label for="artistField">Artist</label>
+      {{input id="artistField" placeholder="Title" value=model.artist}}
     </div>
-  </div>
-  <div class="form-group">
-    <label for="yearField" class="col-sm-2 control-label">Year</label>
-    <div class="col-sm-10">
-      {{input class="form-control" id="yearField" placeholder="Year" value=model.year}}
+    <div class="pure-control-group">
+      <label for="yearField">Year</label>
+      {{input id="yearField" placeholder="Year" value=model.year}}
     </div>
-  </div>
-  <div class="form-group">
-    <label for="commentsField" class="col-sm-2 control-label">Comments</label>
-    <div class="col-sm-10">
-      {{input class="form-control" id="commentsField" placeholder="Comments" value=model.comments}}
+    <div class="pure-control-group">
+      <label for="commentsField">Comments</label>
+      {{input id="commentsField" placeholder="Comments" value=model.comments}}
     </div>
-  </div>
-  <div class="form-group">
-    <label class="col-sm-2 control-label">First played</label>
-    <div class="radio col-sm-10">
-      <label>
+    <div class="pure-control-group">
+      <label>First played</label>
+      <label class="pure-radio">
         {{radio-button value="now" checked=firstPlayedMode}}
         Now
       </label>
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="radio col-sm-offset-2 col-sm-10">
-      <label>
+      <label class="pure-radio">
         {{radio-button value="date" checked=firstPlayedMode}}
         At a specific date
       </label>
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="radio col-sm-offset-2 col-sm-10">
-      <label>
+      <label class="pure-radio">
         {{radio-button value="unknown" checked=firstPlayedMode}}
         Unknown
       </label>
     </div>
-  </div>
-  {{#if isSpecificDate}}
-  <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-10">
-      <div class="row">
-        <div class="col-xs-4" style="width: 150px">{{input class="form-control" placeholder="Year" value=firstPlayedYear}}</div>
-        <div class="col-xs-2" style="width: 100px">{{input class="form-control" placeholder="Month" value=firstPlayedMonth}}</div>
-        <div class="col-xs-2" style="width: 100px">{{input class="form-control" placeholder="Day" value=firstPlayedDay}}</div>
+    <div class="pure-control-group">
+    </div>
+    <div class="pure-control-group">
+    </div>
+    {{#if isSpecificDate}}
+    <div class="pure-control-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <div class="row">
+          <div class="col-xs-4" style="width: 150px">{{input placeholder="Year" value=firstPlayedYear}}</div>
+          <div class="col-xs-2" style="width: 100px">{{input placeholder="Month" value=firstPlayedMonth}}</div>
+          <div class="col-xs-2" style="width: 100px">{{input placeholder="Day" value=firstPlayedDay}}</div>
+        </div>
       </div>
     </div>
-  </div>
-  {{/if}}
-  {{#each model.sources as |source|}}
-    {{album-edit-source source=source sources=model.sources}}
-  {{/each}}
-  <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-10">
-      <button type="button" class="btn btn-default" {{action 'addSource'}}>Add Source</button>
-      <button type="button" class="btn btn-default" {{action 'add'}}>Add</button>
+    {{/if}}
+    {{#each model.sources as |source|}}
+      {{album-edit-source source=source sources=model.sources}}
+    {{/each}}
+    <div class="pure-controls">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="button" class="pure-button" {{action 'addSource'}}>Add Source</button>
+        <button type="button" class="pure-button pure-button-primary" {{action 'add'}}>Add</button>
+      </div>
     </div>
-  </div>
+  </fieldset>
 </form>
