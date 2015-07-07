@@ -15,6 +15,6 @@
     "bootstrap": "~3.2.0",
     "moment": "~2.8.3",
     "fontawesome": "~4.2.0",
-    "ember-data.model-fragments": "0.3.0"
+    "ember-data.model-fragments": "0.3.3"
   }
 }

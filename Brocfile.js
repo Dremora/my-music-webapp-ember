@@ -16,7 +16,6 @@ app.import('bower_components/bootstrap/dist/css/bootstrap.css');
 app.import('bower_components/fontawesome/css/font-awesome.min.css');
 
 app.import('bower_components/moment/moment.js');
-app.import('bower_components/ember-data.model-fragments/dist/ember-data.model-fragments.js');
 
 
 
