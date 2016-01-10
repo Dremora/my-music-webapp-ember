@@ -3,7 +3,6 @@
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'my-music-client',
-    podModulePrefix: 'my-music-client',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',

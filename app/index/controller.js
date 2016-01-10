@@ -10,7 +10,7 @@ export default Ember.Controller.extend({
       this.set('albums', [])
       return
     }
-    let promise = this.store.find('album', { query: this.get('query')})
+    let promise = this.store.query('album', { query: this.get('query')})
     this.set('albumPromise', promise)
     promise.then((albums) => {
       if (promise.shouldStop) {

@@ -1,9 +1,9 @@
-<h2>{{title}} <small>{{artist}}</small></h2>
-{{#link-to 'albums.edit' this}}edit{{/link-to}}
-<span class="mymusic-album-firstPlayed">{{formatted-date first_played}}</span>
+<h2>{{model.title}} <small>{{model.artist}}</small></h2>
+{{#link-to 'albums.edit' model}}edit{{/link-to}}
+<span class="mymusic-album-firstPlayed">{{formatted-date model.first_played}}</span>
 
 <ul>
-  {{#each sources as |source|}}
+  {{#each model.sources as |source|}}
   <li>{{source.location}}</li>
   {{/each}}
 </ul>

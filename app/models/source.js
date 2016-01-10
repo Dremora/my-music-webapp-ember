@@ -1,7 +1,7 @@
 import DS from 'ember-data';
-// import EmberValidations from 'ember-validations';
+import MF from 'model-fragments';
 
-export default DS.ModelFragment.extend({
+export default MF.Fragment.extend({
   accurate_rip: DS.attr('string'),
   comments: DS.attr('string'),
   cue_issues: DS.attr('string'),

@@ -2,13 +2,13 @@
 <div class="form-group">
   <label class="col-sm-2 control-label">Location</label>
   <div class="col-sm-9">
-  {{view "select"
-    classNames="form-control"
-    content=locations
-    optionValuePath="content.id"
-    optionLabelPath="content.label"
-    value=source.location
-  }}
+    <select class="form-control" onchange={{action (mut source.location) value="target.value"}}>
+      {{#each locations key="@index" as |item|}}
+        <option value="{{item.id}}" selected={{eq item.id source.location}}>
+          {{item.label}}
+        </option>
+      {{/each}}
+    </select>
   </div>
   <div class="col-sm-1">
     <button type="button" class="btn btn-default" {{action 'deleteSource'}}>×</button>
@@ -56,13 +56,13 @@
 <div class="form-group">
   <label class="col-sm-2 control-label">Format</label>
   <div class="col-sm-10">
-  {{view "select"
-    classNames="form-control"
-    content=formats
-    optionValuePath="content.id"
-    optionLabelPath="content.label"
-    value=source.format
-  }}
+    <select class="form-control" onchange={{action (mut source.format) value="target.value"}}>
+      {{#each formats key="@index" as |item|}}
+        <option value="{{item.id}}" selected={{eq item.id source.format}}>
+          {{item.label}}
+        </option>
+      {{/each}}
+    </select>
   </div>
 </div>
 {{/if}}

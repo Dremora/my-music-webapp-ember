@@ -7,7 +7,7 @@ export default Ember.Route.extend({
 
   actions: {
     willTransition: function () {
-      this.get('controller').get('model').rollback()
+      this.get('controller').get('model').rollbackAttributes()
     }
   }
 });

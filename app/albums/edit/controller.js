@@ -41,7 +41,7 @@ export default Ember.Controller.extend({
   specificDateValue: function () {
     let year = parseInt(this.get('firstPlayedYear'))
     if (Number.isNaN(year) || !year) {
-      return undefined
+      return []
     }
 
     let month = parseInt(this.get('firstPlayedMonth'))

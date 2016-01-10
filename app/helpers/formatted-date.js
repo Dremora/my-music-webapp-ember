@@ -1,8 +1,7 @@
-/* global moment */
-
 import Ember from 'ember';
+import moment from 'moment';
 
-export default Ember.Handlebars.makeBoundHelper((val) => {
+export default Ember.Helper.helper(([val]) => {
   if (Ember.isArray(val)) {
     if (val.length === 1) {
       return moment.utc([val[0]]).format('YYYY')
