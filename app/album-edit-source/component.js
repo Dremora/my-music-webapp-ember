@@ -3,9 +3,9 @@ import Ember from 'ember';
 export default Ember.Component.extend({
 
   locations: [
+    { id: 'apple-music', label: 'Apple Music' },
     { id: 'google-music', label: 'Google Music' },
     { id: 'spotify', label: 'Spotify' },
-    { id: 'apple-music', label: 'Apple Music' },
     { id: 'foobar2000', label: 'foobar2000' }
   ],
 
