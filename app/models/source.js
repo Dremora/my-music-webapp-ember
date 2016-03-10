@@ -9,7 +9,7 @@ export default MF.Fragment.extend({
   download: DS.attr('string'), // TODO: string or array
   edition: DS.attr('string'),
   format: DS.attr('string'),
-  location: DS.attr('string'),
+  location: DS.attr('string', { defaultValue: 'apple-music' }),
   mbid: DS.attr('string'),
   tag_issues: DS.attr('string')
 });
