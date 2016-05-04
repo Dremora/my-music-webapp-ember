@@ -20,9 +20,6 @@ var fontawesome = pickFiles('bower_components/fontawesome/fonts', {
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
-    vendorFiles: {
-      'handlebars.js': null
-    }
   })
 
   app.import('bower_components/bootstrap/dist/css/bootstrap.css')
